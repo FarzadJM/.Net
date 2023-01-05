@@ -1,0 +1,1 @@
+docker build -t dockernetwork:1.0 .

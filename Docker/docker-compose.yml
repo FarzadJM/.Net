@@ -1,0 +1,11 @@
+version: '3'
+services: 
+  humanresourceswebapi:
+    image: projectcore/humanresources.webapi:1.0
+
+  projectcore:
+    image: projectcore/ui.webapp:1.0
+    depends_on:
+      - humanresourceswebapi
+    ports: 
+      - 5100:80
