@@ -2,9 +2,11 @@ version: '3'
 services: 
   humanresourceswebapi:
     image: projectcore/humanresources.webapi:1.0
+    restart: always
 
   projectcore:
     image: projectcore/ui.webapp:1.0
+    restart: always
     depends_on:
       - humanresourceswebapi
     ports: 
