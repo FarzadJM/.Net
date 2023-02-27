@@ -37,7 +37,6 @@ public class BasicAuthentication : AuthenticationHandler<AuthenticationSchemeOpt
                 var principal = new ClaimsPrincipal(identity);
                 var authenticationScheme = Scheme.Name;
                 var authenticationTicket = new AuthenticationTicket(principal, authenticationScheme);
-                Console.WriteLine("Check");
                 return Task.FromResult(AuthenticateResult.Success(authenticationTicket));
             }
         }
